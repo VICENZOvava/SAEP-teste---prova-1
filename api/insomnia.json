@@ -1,0 +1,187 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-11-13T18:53:08.524Z",
+  "__export_source": "backend-aula",
+  "resources": [
+    {
+      "_id": "wrk_backend",
+      "_type": "workspace",
+      "name": "Backend Aula"
+    },
+    {
+      "_id": "fld_api",
+      "_type": "request_group",
+      "parentId": "wrk_backend",
+      "name": "api"
+    },
+    {
+      "_id": "fld_USUARIO",
+      "_type": "request_group",
+      "parentId": "fld_api",
+      "name": "USUARIO"
+    },
+    {
+      "_id": "req_USUARIO_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_USUARIO",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/usuario/listar"
+    },
+    {
+      "_id": "req_USUARIO_GET_ID",
+      "_type": "request",
+      "parentId": "fld_USUARIO",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/usuario/buscar/:id"
+    },
+    {
+      "_id": "req_USUARIO_POST",
+      "_type": "request",
+      "parentId": "fld_USUARIO",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/usuario/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id_usuario\": 0,\n  \"nome\": \"string\",\n  \"email\": \"string\",\n  \"senha\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_USUARIO_PUT",
+      "_type": "request",
+      "parentId": "fld_USUARIO",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/usuario/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id_usuario\": 0,\n  \"nome\": \"string\",\n  \"email\": \"string\",\n  \"senha\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_USUARIO_DELETE",
+      "_type": "request",
+      "parentId": "fld_USUARIO",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/usuario/excluir/:id"
+    },
+    {
+      "_id": "fld_TAREFA",
+      "_type": "request_group",
+      "parentId": "fld_api",
+      "name": "TAREFA"
+    },
+    {
+      "_id": "req_TAREFA_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_TAREFA",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/tarefa/listar"
+    },
+    {
+      "_id": "req_TAREFA_GET_ID",
+      "_type": "request",
+      "parentId": "fld_TAREFA",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/tarefa/buscar/:id"
+    },
+    {
+      "_id": "req_TAREFA_POST",
+      "_type": "request",
+      "parentId": "fld_TAREFA",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/tarefa/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id_usuario\": 0,\n  \"descricação\": \"string\",\n  \"nome_setor\": \"string\",\n  \"prioridade\": \"string\",\n  \"data_cadastro\": \"2026-11-13T18:53:08.524Z\",\n  \"status\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_TAREFA_PUT",
+      "_type": "request",
+      "parentId": "fld_TAREFA",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/tarefa/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id_usuario\": 0,\n  \"descricação\": \"string\",\n  \"nome_setor\": \"string\",\n  \"prioridade\": \"string\",\n  \"data_cadastro\": \"2026-11-13T18:53:08.524Z\",\n  \"status\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_TAREFA_DELETE",
+      "_type": "request",
+      "parentId": "fld_TAREFA",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/tarefa/excluir/:id"
+    }
+  ]
+}

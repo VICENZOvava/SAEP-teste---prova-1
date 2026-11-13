@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Gestão de Tarefas</h1>
+</header>
+
+<nav class="fluxo-nav">
+
+    <button onclick="mostrarTela('tarefas')">
+         Gerenciar Tarefas
+    </button>
+
+    <button onclick="abrirCadastroTarefa()">
+         + Cadastrar Tarefa
+    </button>
+
+    <button onclick="mostrarTela('usuarios')">
+         Gerenciar Usuários
+    </button>
+
+    <button onclick="modalUsuario.classList.remove('oculto')">
+         + Cadastrar Usuário
+    </button>
+
+</nav>
+
+<section id="telaUsuarios">
+
+    <h2 class="titulo-lista">Usuários</h2>
+    <main id="listaUsuarios"></main>
+
+</section>
+
+<section id="telaTarefas" class="oculto">
+
+    <div class="cabecalho-Tarefa">
+
+        <h2 class="titulo-lista">
+            Tarefas
+        </h2>
+
+    </div>
+
+    <main id="listaTarefas"></main>
+
+</section>
+
+<div id="modalUsuario" class="modal oculto">
+    <div class="janela">
+
+        <h2>Novo Usuário</h2>
+
+        <form id="formUsuario">
+
+            <label>Nome</label>
+            <input type="text" id="nomeUsuario" required>
+
+            <label>Email</label>
+            <input type="email" id="emailUsuario" required>
+
+            <label>Senha</label>
+            <input type="password" id="senhaUsuario" required>
+
+            <button type="reset" onclick="modalUsuario.classList.add('oculto')">
+                Cancelar
+            </button>
+
+            <button type="submit">Salvar</button>
+
+        </form>
+
+    </div>
+</div>
+
+<div id="modalTarefa" class="modal oculto">
+    <div class="janela">
+
+        <h2>Nova Tarefa</h2>
+
+        <form id="formTarefa">
+
+            <label>ID do Usuário</label>
+            <input type="number" id="idUsuario" required>
+
+            <label>Descrição</label>
+            <input type="text" id="descricaoTarefa" required>
+
+            <label>Setor</label>
+            <input type="text" id="nomeSetor" required>
+
+            <label>Prioridade</label>
+            <input type="text" id="prioridade" required>
+
+            <label>Status</label>
+            <input type="text" id="status" required>
+
+            <label>Data</label>
+            <input type="text" id="data_cadastro" required>
+
+            <button type="reset" onclick="modalTarefa.classList.add('oculto')">
+                Cancelar
+            </button>
+
+            <button type="submit">Salvar</button>
+
+        </form>
+
+    </div>
+</div>
+
+<div id="detalhesUsuario" class="modal oculto">
+    <div class="janela">
+
+        <h2 id="tituloUsuario"></h2>
+
+        <label>Nome</label>
+        <input type="text" id="nomeUsuarioEdit">
+
+        <label>Email</label>
+        <input type="email" id="emailUsuarioEdit">
+
+        <button onclick="salvarEdicaoUsuario()">Salvar</button>
+        <button onclick="excluirUsuario()">Excluir</button>
+        <button onclick="detalhesUsuario.classList.add('oculto')">Fechar</button>
+
+    </div>
+</div>
+
+<div id="detalhesTarefa" class="modal oculto">
+    <div class="janela">
+
+        <h2 id="tituloTarefa"></h2>
+
+        <label>Prioridade</label>
+        <input type="text" id="prioridadeEdit">
+
+        <label>Status</label>
+        <input type="text" id="statusEdit">
+
+        <button onclick="salvarEdicaoTarefa()">Salvar</button>
+        <button onclick="excluirTarefa()">Excluir</button>
+        <button onclick="detalhesTarefa.classList.add('oculto')">Fechar</button>
+
+    </div>
+</div>
+
+<footer>
+    <h3>by ® Vicenzo Vieira Varandas</h3>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
